@@ -7,7 +7,8 @@
     <title>Tabla de simbolos</title>
   </head>
   <body>
-    <!-- <table>
+    <h1 style="text-align: center">Tokens</h1>
+    <table>
       <thead>
         <th>Nombre</th>
         <th>Lexema</th>
@@ -24,6 +25,24 @@
         </tr>
         {% endfor %}
       </tbody>
-    </table> -->
+    </table>
+
+    <h1 style="text-align: center">Errores</h1>
+    <table>
+      <thead>
+        <th>Lexema</th>
+        <th>Fila</th>
+        <th>Columna</th>
+      </thead>
+      <tbody>
+        {% for e in errs %}
+        <tr>
+          <td>{{e.char}}</td>
+          <td>{{e.row}}</td>
+          <td>{{e.col}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </body>
 </html>
